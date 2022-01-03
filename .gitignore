@@ -2,10 +2,17 @@
 
 # dependencies
 /node_modules
+/downloads
+downloads
+downloads/
 node_modules
 node_modules/
 /.pnp
 .pnp.js
+
+/env
+env
+env/
 
 # testing
 /coverage
