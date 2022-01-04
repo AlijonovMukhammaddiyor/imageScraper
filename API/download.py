@@ -1,7 +1,7 @@
 import json
 import os
 from urllib.request import Request, urlopen, HTTPError, URLError
-from os.path import basename
+from os.path import basename, exists
 import shutil
 from http.client import IncompleteRead
 
@@ -10,6 +10,7 @@ f = open('download.json')
 """
    First, I will download images in separate folders inside downloads folder
 """
+
 # load the urls
 data = json.load(f)
 # cwd = os.getcwd()
@@ -67,6 +68,11 @@ for query in data["links"]:
 
 def removeFile(filename, dir):
     os.remove()
+
+# if old zip file exists, delete it first
+if exists("./downloads.zip"):
+    os.remove("./downloads.zip")
+
 
 # zip downloads folder
 shutil.make_archive("downloads", 'zip', "./downloads")

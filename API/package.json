@@ -16,6 +16,7 @@
     "express": "^4.17.2",
     "images-scraper": "^6.4.0",
     "nodemon": "^2.0.15",
-    "puppeteer": "^13.0.1"
+    "puppeteer": "^13.0.1",
+    "python-shell": "^3.0.1"
   }
 }

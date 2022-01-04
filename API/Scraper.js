@@ -155,7 +155,7 @@ class GoogleImageScraper {
 				}
 
 				await page.waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
-				await page.waitFor(self.scrollDelay);
+				await page.waitForTimeout(self.scrollDelay);
 			}
 
 			// don't forget to delete me :)
